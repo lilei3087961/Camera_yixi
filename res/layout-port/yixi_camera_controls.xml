@@ -1,0 +1,94 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- Copyright (C) 2013 The Android Open Source Project
+
+     Licensed under the Apache License, Version 2.0 (the "License");
+     you may not use this file except in compliance with the License.
+     You may obtain a copy of the License at
+
+          http://www.apache.org/licenses/LICENSE-2.0
+
+     Unless required by applicable law or agreed to in writing, software
+     distributed under the License is distributed on an "AS IS" BASIS,
+     WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
+     See the License for the specific language governing permissions and
+     limitations under the License.
+-->
+<com.android.camera.ui.YixiCameraControls
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/yixi_camera_controls"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+     <FrameLayout
+             	android:id="@+id/color_effect_pop_frame"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"/>
+	 <!-- 
+     <ImageView 
+         	android:id="@+id/setmore_button"
+	        android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="top|left"
+            android:src="@drawable/yixi_othersetting_holo_light" 
+	    /> -->
+     <View
+            android:id="@+id/blocker"
+            android:clickable="true"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/switcher_size"
+            android:layout_gravity="bottom" />
+    <!--  
+      <include layout="@layout/menu_indicators"
+            android:layout_width="64dip"
+            android:layout_height="64dip"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="6dip"
+            android:layout_marginRight="-5dip" />
+
+        <com.android.camera.ui.PieMenuButton
+            android:id="@+id/menu"
+            style="@style/SwitcherButton"
+            android:layout_gravity="bottom|right"
+            android:layout_marginBottom="2dip"
+            android:contentDescription="@string/accessibility_menu_button" />
+
+         <com.android.camera.ui.ModuleSwitcher
+           android:id="@+id/camera_switcher"
+           style="@style/SwitcherButton"
+           android:layout_gravity="bottom|left"
+           android:layout_marginBottom="2dip"
+           android:contentDescription="@string/accessibility_mode_picker" /> 
+--> 
+        <com.android.camera.ui.YixiShutterButton
+            android:id="@+id/shutter_button"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="bottom|center_horizontal"
+            android:layout_marginBottom="25dip"
+            android:clickable="true"
+            android:contentDescription="@string/accessibility_shutter_button"
+            android:focusable="true"
+            android:scaleType="center"
+            android:src="@drawable/yixi_btn_new_shutter" />
+
+        <com.android.camera.ui.RotateImageView
+            android:id="@+id/preview_thumb"
+            android:visibility="visible"
+            android:src="@drawable/yixi_preview_thumb"
+            android:layout_marginRight="50dip"
+            android:layout_marginBottom="0dip"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:scaleType="fitXY"
+            android:layout_gravity="left|bottom"
+            android:contentDescription="@string/switch_photo_filmstrip" />
+        <com.android.camera.ui.YixiColorEffectButton
+            android:id="@+id/btn_color_effect"
+            android:src="@drawable/yixi_btn_color_effect"
+            android:layout_marginLeft="50dip"
+            android:layout_marginBottom="0dip"
+            android:layout_width="50dip"
+            android:layout_height="50dip"
+            android:scaleType="fitXY"
+            android:layout_gravity="right|bottom"
+            />
+</com.android.camera.ui.YixiCameraControls>

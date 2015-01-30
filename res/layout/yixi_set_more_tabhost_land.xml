@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.android.camera.ui.YixiTabHost xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/tabhost_set_more"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+     >
+    <LinearLayout android:id="@+id/linearLayout"
+		android:layout_width="fill_parent" android:layout_height="wrap_content"
+		android:orientation="vertical">
+		
+	   <TabWidget android:id="@android:id/tabs"
+	       		android:background="#ff666666"
+				android:layout_width="fill_parent" android:layout_height="wrap_content">
+	   </TabWidget>
+	   <FrameLayout android:id="@android:id/tabcontent"
+			android:layout_width="fill_parent" android:layout_height="wrap_content"
+			android:layout_gravity="top">
+		   <com.android.camera.ui.MoreSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
+		        style="@style/SettingPopupWindowLand"
+		        android:layout_gravity="top"
+		        android:id="@+id/tab_camera"
+		        >
+		        <!-- android:layout_height="405dp" -->
+		    	<FrameLayout
+		    	    android:background="@color/popup_background"
+		            android:layout_width="@dimen/big_setting_popup_window_width"
+		            android:layout_height="wrap_content">
+		        	<ListView android:id="@+id/settingList"
+		                style="@style/YixiSettingItemListLand"
+		                android:layout_height="280dp"
+		                />
+		    	</FrameLayout>
+		    </com.android.camera.ui.MoreSettingPopup>
+		    
+		    <com.android.camera.ui.MoreSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
+		        style="@style/SettingPopupWindow"
+		        android:id="@+id/tab_video"
+		        >
+		    	<FrameLayout
+		            android:background="@color/popup_background"
+		            android:layout_width="@dimen/big_setting_popup_window_width"
+		            android:layout_height="wrap_content">
+		        	<ListView android:id="@+id/settingList"
+		                style="@style/YixiSettingItemList" 
+		                />
+		    	</FrameLayout>
+			</com.android.camera.ui.MoreSettingPopup>
+			<com.android.camera.ui.MoreSettingPopup xmlns:android="http://schemas.android.com/apk/res/android"
+		        style="@style/SettingPopupWindow"
+		        android:id="@+id/tab_common"
+		        >
+		    	<FrameLayout
+		            android:background="@color/popup_background"
+		            android:layout_width="@dimen/big_setting_popup_window_width"
+		            android:layout_height="wrap_content">
+		        	<ListView android:id="@+id/settingList"
+		                style="@style/YixiSettingItemList" 
+		                />
+		    	</FrameLayout>
+			</com.android.camera.ui.MoreSettingPopup>
+		</FrameLayout>
+	</LinearLayout>
+</com.android.camera.ui.YixiTabHost>
